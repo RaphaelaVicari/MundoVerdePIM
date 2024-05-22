@@ -67,14 +67,18 @@ namespace ConsoleApp5
 ██║╚██╔╝██║██║░░░██║██║╚████║██║░░██║██║░░██║  ░╚████╔╝░██╔══╝░░██╔══██╗██║░░██║██╔══╝░░
 ██║░╚═╝░██║╚██████╔╝██║░╚███║██████╔╝╚█████╔╝  ░░╚██╔╝░░███████╗██║░░██║██████╔╝███████╗
 ╚═╝░░░░░╚═╝░╚═════╝░╚═╝░░╚══╝╚═════╝░░╚════╝░  ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝\n");
-
-
-            while(true)
+            string nome;
+            string tipoDocumento;
+            string documento;
+            string telefone;
+            string email;
+            string senha;
+            while (true)
             {
                 while(true)
                 {
                     Console.WriteLine("Digite seu nome completo");
-                    string nome = Convert.ToString(Console.ReadLine());
+                    nome = Convert.ToString(Console.ReadLine());
 
 
                     if (!ValidarNomeCompleto(nome.Trim()))
@@ -88,7 +92,7 @@ namespace ConsoleApp5
                 while(true)
                 {
                     Console.WriteLine("Digite o tipo de documento que deseja cadastrar CPF ou CNPJ");
-                    string tipoDocumento = Convert.ToString(Console.ReadLine());
+                    tipoDocumento = Convert.ToString(Console.ReadLine());
 
                     if (!tipoDocumento.Trim().Equals("CPF", StringComparison.InvariantCultureIgnoreCase) &&
                         !tipoDocumento.Trim().Equals("CNPJ", StringComparison.InvariantCultureIgnoreCase))
@@ -102,7 +106,7 @@ namespace ConsoleApp5
                 while(true)
                 {
                     Console.WriteLine("Digite o número do documento escolhido");
-                    string documento = Convert.ToString(Console.ReadLine());
+                    documento = Convert.ToString(Console.ReadLine());
 
                     if (!ValidarCPF(documento.Trim()) && !ValidarCNPJ(documento.Trim()))
                     {
@@ -115,7 +119,7 @@ namespace ConsoleApp5
                 while(true)
                 {
                     Console.WriteLine("Digite seu telefone");
-                    string telefone = Convert.ToString(Console.ReadLine());
+                    telefone = Convert.ToString(Console.ReadLine());
 
                     if (!ValidarTelefone(telefone.Trim()))
                     {
@@ -128,7 +132,7 @@ namespace ConsoleApp5
                 while(true)
                 {
                     Console.WriteLine("Digite seu e-mail");
-                    string email = Convert.ToString(Console.ReadLine());
+                    email = Convert.ToString(Console.ReadLine());
 
                     if (!ValidarEmail(email.Trim()))
                     {
@@ -141,7 +145,7 @@ namespace ConsoleApp5
                 while (true)
                 {
                     Console.WriteLine("Digite uma senha com 8 caracteres utilizando um caracter especial");
-                    string senha = Convert.ToString(Console.ReadLine());
+                    senha = Convert.ToString(Console.ReadLine());
 
                     if (!ValidarSenha(senha.Trim()))
                     {
