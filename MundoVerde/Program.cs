@@ -66,7 +66,7 @@ namespace ConsoleApp5
 ██╔████╔██║██║░░░██║██╔██╗██║██║░░██║██║░░██║  ╚██╗░██╔╝█████╗░░██████╔╝██║░░██║█████╗░░
 ██║╚██╔╝██║██║░░░██║██║╚████║██║░░██║██║░░██║  ░╚████╔╝░██╔══╝░░██╔══██╗██║░░██║██╔══╝░░
 ██║░╚═╝░██║╚██████╔╝██║░╚███║██████╔╝╚█████╔╝  ░░╚██╔╝░░███████╗██║░░██║██████╔╝███████╗
-╚═╝░░░░░╚═╝░╚═════╝░╚═╝░░╚══╝╚═════╝░░╚════╝░  ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝\n");
+╚═╝░░░░░╚═╝░╚═════╝░╚═╝░░╚══╝╚═════╝░░╚════╝░  ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝");
             string nome;
             string tipoDocumento;
             string documento;
@@ -91,7 +91,7 @@ namespace ConsoleApp5
 
                 while(true)
                 {
-                    Console.WriteLine("Digite o tipo de documento que deseja cadastrar CPF ou CNPJ");
+                    Console.WriteLine("Digite o tipo de documento que deseja cadastrar CPF ou CNPJ com pontuação");
                     tipoDocumento = Convert.ToString(Console.ReadLine());
 
                     if (!tipoDocumento.Trim().Equals("CPF", StringComparison.InvariantCultureIgnoreCase) &&
@@ -118,7 +118,7 @@ namespace ConsoleApp5
 
                 while(true)
                 {
-                    Console.WriteLine("Digite seu telefone");
+                    Console.WriteLine("Digite seu telefone utilizando a formatação (xx)xxxxx-xxxx");
                     telefone = Convert.ToString(Console.ReadLine());
 
                     if (!ValidarTelefone(telefone.Trim()))
@@ -144,7 +144,7 @@ namespace ConsoleApp5
 
                 while (true)
                 {
-                    Console.WriteLine("Digite uma senha com 8 caracteres utilizando um caracter especial");
+                    Console.WriteLine("Digite uma senha com 8 caracteres utilizando um caracter especial e uma letra maiúscula");
                     senha = Convert.ToString(Console.ReadLine());
 
                     if (!ValidarSenha(senha.Trim()))
